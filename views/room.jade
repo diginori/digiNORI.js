@@ -3,25 +3,28 @@
     alert('방에 입장할 수 없습니다.');
     location.href = '/enter';
 - else
-  h3 방제 : 
+  h3 합주실 : 
     span#roomName= roomName 
     input#leave(type='button', value='나가기')
-  #chatWindow(style='width:400px; height:400px; overflow:auto; border:1px solid #000; float:left; margin-right:10px;')
+  #chatWindow(style='width:60%; height:400px; overflow:auto; border:1px solid #000; float:left; margin-right:10px;')
     
   div(style='width:100px; height:400px; overflow:auto; border:1px solid #000;')
-    p 참가자
+    p 연주자
     ul#attendants
       each attendant in attendants
         li(id='attendant-'+attendant)= attendant 
   form
     span#myName #{nickName}
-    input(type='text', style='width:300px;')#message
+    input(type='text', style='width:77%;')#message
     input(type='submit', value='보내기')
 
-  form
-    span#myName #{nickName}
-    input(type='text', style='width:300px;')#message
-    input(type='submit', value='징')
+  input(type='button', value='징')
+  input(type='button', value='북')
+  input(type='button', value='장구')
+  input(type='button', value='꽹과리')
+  input(type='button', value='추임새')
+  
+
 
 
   script(type='text/javascript')

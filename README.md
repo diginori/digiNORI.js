@@ -10,7 +10,7 @@ http://digiNORI.com
 
 Please be sure you have expressjs and socket.io modules installed before running this application.
 
-On Mac/Linux:
+On Mac:
 
 	$ npm install express
 	$ npm install socket.io
@@ -21,11 +21,15 @@ On Mac/Linux:
 After running go to this address:
 
 	http://locahost:3000/
+
+### Current features
+- 채팅시 j,k,b,g,c 를 입력하면 서버에서 징,꽹과리,북,장구,추임새 소리가 발생	
 	
 ### Future features
 
 - 60억 명이 한꺼번에 풍물굿을 만들어 냅니다.
 - 배움의 공간에서 손쉽게 디지노리로 풍물굿을 만납니다.
 - 풍물굿판 안에서 새로운 문화가 탄생합니다.
+- 별도의 node.js 서버 없이 브라우저가 서버가 되어서 동작
 	
 ###Enjoy!

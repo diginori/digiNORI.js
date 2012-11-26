@@ -8,7 +8,9 @@ http://digiNORI.com
 
 ### To run:
 
-Please be sure you have expressjs and socket.io modules installed before running this application.
+최초 1회 expressjs, socket.io, jade 를 설치하세요.
+사운드 재생에 Mac 의 afplay 를 사용함에 따라 다른 OS 에서는 동작하지 않음.
+
 
 On Mac:
 
@@ -31,5 +33,6 @@ After running go to this address:
 - 배움의 공간에서 손쉽게 디지노리로 풍물굿을 만납니다.
 - 풍물굿판 안에서 새로운 문화가 탄생합니다.
 - 별도의 node.js 서버 없이 브라우저가 서버가 되어서 동작
+- html5 웹오디오 사용
 	
 ###Enjoy!

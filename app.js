@@ -107,4 +107,4 @@ app.listen(3000);
 // Socket.io
 require('./rooms')(app);
 
-console.log("Express server listening on port %d in %s mode", app.address().port, app.settings.env);
+console.log("digiNORI server listening on port %d in %s mode", app.address().port, app.settings.env);

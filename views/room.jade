@@ -1,13 +1,32 @@
+//
+  디지노리(digiNORI) extension 사물놀이(samulNORI) extension 풍물놀이(pungmulNORI) extension 굿(gut) = play = NORI
+ 
+  Samulnori is music played on the four basic Korean percussion instruments: the ggoenggwari (a small gong), the jing (a large gong), the janggo (an hourglass drum), and the buk (a barrel drum). Though derived from traditional Korean famers'' music, samulnori itself is a fairly recent phenomenon, having begun in 1978 with the establishment of the very first Samulnory band by Kim Duck-soo. It became popular and spread quickly as a new genre of music. This highly creative, exhilarating, joyful music is now performed on stages throughout the world.
+  
+  사물놀이란 꽹과리, 징, 장고, 북 등 4개의 기본적인 타악기로 연주하는 음악을 일컫는다. 사물놀이는 전통 농악에서 파생되었지만 그리 오랜 역사를 가진 것은 아니며 1978년 창단한 김덕수 사물놀이패로 시작되었다. 사물놀이는 대중적인 파급효과와 맞물려 새로운 예술 장르를 지칭하는 말로 변모되었다. 매우 독창적이고 신명 나는 흥겨운 음악으로 전 세계에서 공연되고 있다.
+  
+  추임새 = chuimsae
+
+
 - if (!isSuccess)
   script
     alert('합주실에 입장할 수 없습니다.');
     location.href = '/enter';
 - else
+
+  input#jingButton(type='button', value='징')
+  input#bukButton(type='button', value='북')
+  input#janggoButton(type='button', value='장구')
+  input#ggoenggwariButton(type='button', value='꽹과리')
+  input#chuimsaeButton(type='button', value='추임새')
+
   h3 합주실 : 
     span#roomName= roomName 
     input#leave(type='button', value='나가기')
   #chatWindow(style='width:60%; height:400px; overflow:auto; border:1px solid #000; float:left; margin-right:10px;')
-    
+  
+
+
   div(style='width:100px; height:400px; overflow:auto; border:1px solid #000;')
     p 연주자
     ul#attendants
@@ -17,15 +36,6 @@
     span#myName #{nickName}
     input(type='text', style='width:77%;')#message
     input(type='submit', value='보내기')
-
-  input(type='button', value='징')
-  input(type='button', value='북')
-  input(type='button', value='장구')
-  input(type='button', value='꽹과리')
-  input(type='button', value='추임새')
-  
-
-
 
   script(type='text/javascript')
     $(document).ready(function() {
@@ -75,5 +85,56 @@
         room.emit('leave', {nickName:myName});
         location.href='/enter';
       });
+
+      $("#jingButton").click(function() {
+        messageBox.val('j');
+        var msg = messageBox.val();
+        if ($.trim(msg) !== '') {
+          showMessage(myName + ' : ' + msg);
+          room.json.send({nickName:myName, msg:msg});
+          messageBox.val('');
+        }
+      });
+
+      $("#bukButton").click(function() {
+        messageBox.val('b');
+        var msg = messageBox.val();
+        if ($.trim(msg) !== '') {
+          showMessage(myName + ' : ' + msg);
+          room.json.send({nickName:myName, msg:msg});
+          messageBox.val('');
+        }
+      });
+
+      $("#janggoButton").click(function() {
+        messageBox.val('g');
+        var msg = messageBox.val();
+        if ($.trim(msg) !== '') {
+          showMessage(myName + ' : ' + msg);
+          room.json.send({nickName:myName, msg:msg});
+          messageBox.val('');
+        }
+      });
+
+      $("#ggoenggwariButton").click(function() {
+        messageBox.val('k');
+        var msg = messageBox.val();
+        if ($.trim(msg) !== '') {
+          showMessage(myName + ' : ' + msg);
+          room.json.send({nickName:myName, msg:msg});
+          messageBox.val('');
+        }
+      });
+
+      $("#chuimsaeButton").click(function() {
+        messageBox.val('c');
+        var msg = messageBox.val();
+        if ($.trim(msg) !== '') {
+          showMessage(myName + ' : ' + msg);
+          room.json.send({nickName:myName, msg:msg});
+          messageBox.val('');
+        }
+      });
+
     });
  

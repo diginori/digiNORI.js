@@ -16,9 +16,12 @@
 
   img#jingButton(src='http://cloud.github.com/downloads/diginori/digiNORI.js/jing.png')
   img#bukButton(src='http://cloud.github.com/downloads/diginori/digiNORI.js/buk.png')
+  p
+  img#chuimsaeButton(src='http://cloud.github.com/downloads/diginori/digiNORI.js/chuimsae.png')
+  p
   img#janggoButton(src='http://cloud.github.com/downloads/diginori/digiNORI.js/janggo.png')
   img#ggoenggwariButton(src='http://cloud.github.com/downloads/diginori/digiNORI.js/ggoenggwari.png')
-  img#chuimsaeButton(src='http://cloud.github.com/downloads/diginori/digiNORI.js/chuimsae.png')
+  
 
   h3 합주실 : 
     span#roomName= roomName 
@@ -86,7 +89,7 @@
         location.href='/enter';
       });
 
-      $("#jingButton").click(function() {
+      $("#jingButton").mousedown(function() {
         messageBox.val('j');
         var msg = messageBox.val();
         if ($.trim(msg) !== '') {
@@ -96,7 +99,7 @@
         }
       });
 
-      $("#bukButton").click(function() {
+      $("#bukButton").mousedown(function() {
         messageBox.val('b');
         var msg = messageBox.val();
         if ($.trim(msg) !== '') {
@@ -106,7 +109,7 @@
         }
       });
 
-      $("#janggoButton").click(function() {
+      $("#janggoButton").mousedown(function() {
         messageBox.val('g');
         var msg = messageBox.val();
         if ($.trim(msg) !== '') {
@@ -116,7 +119,7 @@
         }
       });
 
-      $("#ggoenggwariButton").click(function() {
+      $("#ggoenggwariButton").mousedown(function() {
         messageBox.val('k');
         var msg = messageBox.val();
         if ($.trim(msg) !== '') {

@@ -25,7 +25,8 @@ After running go to this address:
 	http://locahost:3000/
 
 ### Current features
-- 채팅시 j,k,b,g,c 를 입력하면 서버에서 징,꽹과리,북,장구,추임새 소리가 발생	
+- 채팅시 j,k,b,g,c 를 입력하면 서버에서 징,꽹과리,북,장구,추임새 소리가 발생
+- 각각의 이미지를 선택하면 소리가 발생 
 	
 ### Future features
 

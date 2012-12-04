@@ -14,30 +14,30 @@
     location.href = '/enter';
 - else
 
-  img#jingButton(src='http://cloud.github.com/downloads/diginori/digiNORI.js/jing.png')
-  img#bukButton(src='http://cloud.github.com/downloads/diginori/digiNORI.js/buk.png')
+  img#jingButton(src='/Users/digiNORI/Documents/GitHub/digiNORI.js/image/jing.png', width='200px')
+  img#bukButton(src='./image/buk.png')
   p
-  img#chuimsaeButton(src='http://cloud.github.com/downloads/diginori/digiNORI.js/chuimsae.png')
+  img#chuimsaeButton(src='./image/chuimsae.png')
   p
-  img#janggoButton(src='http://cloud.github.com/downloads/diginori/digiNORI.js/janggo.png')
-  img#ggoenggwariButton(src='http://cloud.github.com/downloads/diginori/digiNORI.js/ggoenggwari.png')
+  img#janggoButton(src='./image/janggo.png')
+  img#ggoenggwariButton(src='./image/ggoenggwari.png')
   
 
   h3 합주실 : 
     span#roomName= roomName 
     input#leave(type='button', value='나가기')
-  #chatWindow(style='width:60%; height:400px; overflow:auto; border:1px solid #000; float:left; margin-right:10px;')
+  #chatWindow(style='width:100px; height:100px; overflow:auto; border:1px solid #000; float:left; margin-right:10px;')
   
 
 
-  div(style='width:100px; height:400px; overflow:auto; border:1px solid #000;')
+  div(style='width:100px; height:100px; overflow:auto; border:1px solid #000;')
     p 연주자
     ul#attendants
       each attendant in attendants
         li(id='attendant-'+attendant)= attendant 
   form
     span#myName #{nickName}
-    input(type='text', style='width:77%;')#message
+    input(type='text', style='width:100px;')#message
     input(type='submit', value='보내기')
 
   script(type='text/javascript')
@@ -129,7 +129,7 @@
         }
       });
 
-      $("#chuimsaeButton").click(function() {
+      $("#chuimsaeButton").mousedown(function() {
         messageBox.val('c');
         var msg = messageBox.val();
         if ($.trim(msg) !== '') {
